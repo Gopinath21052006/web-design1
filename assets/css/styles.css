@@ -607,6 +607,7 @@ img {
 }
 .footer__copy{
   display: block;
+  margin-top: 7rem;
 }
 
 /*=============== SCROLL BAR ===============*/
