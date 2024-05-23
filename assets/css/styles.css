@@ -16,6 +16,7 @@
   --body-color: hsl(0, 0%, 100%);
   --container-color: hsl(0, 0%, 95%);
   --shadow-img: drop-shadow(0 8px 12px hsla(0, 0%, 0%, .2));
+  --filter-img:invert(1);
 
   /*========== Font and typography ==========*/
   /*.5rem = 8px | 1rem = 16px ...*/
@@ -103,11 +104,30 @@ img {
 }
 
 /*=============== THEME ===============*/
-
+.nav__button{
+  display: flex;
+  align-items: center;
+  column-gap: 1rem;
+}
+.change-theme{
+  font-size: 1.25rem;
+  color: var(--title-color);
+  cursor: pointer;
+}
 
 /*========== Variables Dark Theme ==========*/
 
+body.drak-theme{
+  --first-color: hsl(140, 30%, 45%);
+  --first-color-alt: hsl(140, 30%, 40%);
+  --title-color: hsl(140, 4%, 90%);
+  --text-color: hsl(140, 4%, 70%);
+  --body-color: hsl(0, 0%, 10%);
+  --container-color: hsl(0, 0%, 14%);
+  --shadow-img: drop-shadow(0 8px 12px hsla(0, 0%, 0%, .6));
+  --filter-img:initial;
 
+}
 
 /*========== 
 	Color changes in some parts of 
@@ -220,7 +240,7 @@ img {
 }
 .nav__img-1,
 .nav__img-2{
-  filter: invert(1);
+  filter:var(--filter-img);
   position: absolute;
 }
 .nav__img-1{
@@ -246,7 +266,9 @@ img {
 }
 
 /* Active link */
-
+.active-link{
+  color: var(--first-color);
+}
 
 /*=============== HOME ===============*/
 .home{
@@ -271,7 +293,7 @@ img {
 }
 .home__fruit,
 .home__branch{
-  filter: invert(1);
+  filter: var(--filter-img);
   position: absolute;
 }
 .home__fruit{
@@ -363,7 +385,7 @@ img {
 }
 .about__fruit,
 .about__branch{
-  filter: invert(1);
+  filter: var(--filter-img);
   position: absolute;
 }
 .about__fruit{
@@ -583,7 +605,7 @@ img {
 .footer__fruit,
 .footer__branch-1,
 .footer__branch-2{
-  filter:invert(1);
+  filter:var(--filter-img) ;
   position: absolute;
 }
 .footer__fruit{
@@ -627,10 +649,29 @@ img {
   background-color: hsl(0, 0%, 55%);
 }
 /*=============== SCROLL UP ===============*/
-
+.scrollup{
+  position: fixed;
+  right: 1rem;
+  bottom: -50%;
+  background-color: var(--body-color);
+  box-shadow:  0px 2px 16px hsl(0,0%,0%, .1);
+  display: inline-flex;
+  padding: 8px;
+  border-radius: .25rem;
+  font-size: 1.25rem;
+  color: var(--title-color);
+  z-index: var(--z-tooltip);
+  transition: bottom .4s , transfrom .4s ,background-color .4s;
+}
+.scrollup:hover{
+  transform: translateY(-.5rem)
+}
 
 /* Show Scroll Up */
+.show-scroll{
+  bottom: 3rem;
 
+}
 
 /*=============== BREAKPOINTS ===============*/
 /* For small devices */
