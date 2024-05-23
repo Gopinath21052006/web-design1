@@ -117,7 +117,7 @@ img {
 
 /*========== Variables Dark Theme ==========*/
 
-body.drak-theme{
+body.dark-theme{
   --first-color: hsl(140, 30%, 45%);
   --first-color-alt: hsl(140, 30%, 40%);
   --title-color: hsl(140, 4%, 90%);
@@ -133,7 +133,22 @@ body.drak-theme{
 	Color changes in some parts of 
 	the website, in dark theme
 ==========*/
+.dark-theme :is(.shadow-header,.nav-menu,.scrollup){
+  box-shadow: 0 2px 16px hsla(0,0%,0%,.3);
+}
+.dark-theme.scrollup{
+  background-color: var(--container-color);
+}
+.dark-theme::-webkit-scrollbar{
+  background-color: hsl(0, 0%, 15%);
+}
 
+.dark-theme::-webkit-scrollbar-thumb{
+  background-color: hsl(0, 0%, 30%);
+}
+.dark-theme::-webkit-scrollbar-thumb:hover{
+  background-color: hsl(0, 0%, 40%);
+}
 
 /*=============== REUSABLE CSS CLASSES ===============*/
 .container {
