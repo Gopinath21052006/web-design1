@@ -542,6 +542,8 @@ body.dark-theme{
   color: var(--text-color);
 }
 .join__button{
+  position: absolute;
+  right: 23px;
   display: grid;
   row-gap: .75rem;
   background-color: var(--first-color);
@@ -749,7 +751,7 @@ body.dark-theme{
    border-radius: 4rem;
    grid-template-columns: 1fr max-content;
   }
-  .join__input{
+  .join__input,.about__branch,.join__button{
     padding: 1.25rem 1rem;
 
   }
