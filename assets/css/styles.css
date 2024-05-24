@@ -616,7 +616,7 @@ body.dark-theme{
   transition: transfrom .4s;
 }
 .footer__social-link:hover{
-  transform: translateY(-2.5rem);
+  transform: translateY(-.5rem);
 }
 .footer__fruit,
 .footer__branch-1,
@@ -688,6 +688,17 @@ body.dark-theme{
   bottom: 3rem;
 
 }
+
+
+
+
+
+
+
+
+
+
+
 
 /*=============== BREAKPOINTS ===============*/
 /* For small devices */
@@ -792,6 +803,7 @@ body.dark-theme{
   .nav{
     height: calc(var(--header-height)+2rem);
     column-gap: 4rem;
+   padding: 15px;
   }
   .nav__close,
   .nav__toggle,
